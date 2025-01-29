@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Titre par défaut{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.php" class="flex items-center">
+                        <span class="ml-2 text-xl font-bold">SeikoCraft</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.php" class="text-gray-700 hover:text-indigo-600">Accueil</a>
+                    <a href="index.php?page=categories" class="text-gray-700 hover:text-indigo-600">Collections</a>
+                        <a href="index.php?page=connexion" class="text-gray-700 hover:text-indigo-600">Connexion</a>
+                        <a href="index.php?page=inscription" class="text-gray-700 hover:text-indigo-600">Inscription</a>
+                    <a href="index.php?page=panier" class="text-gray-700 hover:text-indigo-600 relative">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+
+    
+
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="max-w-7xl mx-auto py-12 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold mb-4">À propos de SeikoMods</h3>
+                    <p class="text-gray-400">Créateur de montres Seiko personnalisées, alliant tradition horlogère et design moderne.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.php" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="index.php?page=#" class="text-gray-400 hover:text-white">Montres</a></li>
+                        <li><a href="index.php?page=categories" class="text-gray-400 hover:text-white">Collections</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Service Client</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.php?page=contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="index.php?page=faq" class="text-gray-400 hover:text-white">FAQ</a></li>
+                        <li><a href="index.php?page=livraison" class="text-gray-400 hover:text-white">Livraison</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <form action="newsletter.php" method="POST" class="space-y-4">
+                        <input type="email" name="email" placeholder="Votre email" class="w-full px-4 py-2 rounded bg-gray-800 text-white">
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700">
+                            S'inscrire
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; SeikoMods. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

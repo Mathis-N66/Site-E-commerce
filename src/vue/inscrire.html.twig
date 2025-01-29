@@ -1,0 +1,95 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    SeikoCraft - Inscription
+{% endblock %}
+
+{% block content %}
+        <div class="message-container">
+            {% if form.valide is defined %}
+                {% if form.valide == true %}
+                    <div class="success-box">
+                        <h1 class="titre">Inscription réussie</h1>
+                        <h2>Voici votre identifiant : {{ form.email }}</h2>
+                        {% if form.role == 1 %}
+                            <h3>Vous êtes administrateur du site</h3>
+                        {% else %}
+                            <h3>Vous êtes un client du site</h3>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="error-box">
+                        <h1 class="titre">Échec de l'inscription</h1>
+                        <h2>Erreur : {{ form.message }}</h2>
+                        <h3><a href="index.php?page=inscription">Retourner sur la page d'inscription</a></h3>
+                    </div>
+                {% endif %}
+            {% else %}
+            
+        </div>
+
+
+    <div class="min-h-screen pt-16 flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8">
+            <div>
+                <h2 class="mt-9 text-center text-3xl font-extrabold text-gray-900">
+                    Créer un compte
+                </h2>
+            </div>
+            <form class="mt-8 space-y-6" action="index.php?page=inscription" method="post" enctype="application/x-www-form- urlencoded">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <label for="lastname" class="sr-only">Nom</label>
+                        <input id="lastname" name="nom" type="text" required 
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                            placeholder="Nom">
+                    </div>
+                    <div>
+                        <label for="firstname" class="sr-only">Prénom</label>
+                        <input id="firstname" name="prenom" type="text" required 
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                            placeholder="Prénom">
+                    </div>
+                    <div>
+                        <label for="email" class="sr-only">Email</label>
+                        <input id="email" name="inputEmail" type="email" required 
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                            placeholder="Email">
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">Mot de passe</label>
+                        <input id="password" name="inputPassword" type="password" required 
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm" 
+                            placeholder="Mot de passe">
+                    </div>
+                    <div>
+                        <label for="confirm_password" class="sr-only">Confirmer mot de passe</label>
+                        <input id="confirm_password" name="inputPassword2" type="password" required
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                            placeholder="Confirmer le mot de passe">
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit" name="btInscrire" 
+                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Créer un compte
+                    </button>
+                </div>
+
+                <div class="text-center">
+                    <p class="text-sm text-gray-600">
+                        Déjà un compte ? 
+                        <a href="index.php?page=connexion" class="font-medium text-indigo-600 hover:text-indigo-500">
+                            Se connecter
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+{% endif %}
+{% endblock %}
