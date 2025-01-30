@@ -6,9 +6,8 @@ class Poduim{
 
     $this->db = $db;
     
-    $this->selectname = $db->prepare("select p.id, name from product p where p.id = 1");
-    
-    
+    $this->selectname = $db->prepare("select p.name from product p where p.id = 1");
+
     }
 
     public function selectname(){

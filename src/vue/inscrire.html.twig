@@ -8,14 +8,16 @@
         <div class="message-container">
             {% if form.valide is defined %}
                 {% if form.valide == true %}
-                    <div class="success-box">
-                        <h1 class="titre">Inscription réussie</h1>
-                        <h2>Voici votre identifiant : {{ form.email }}</h2>
-                        {% if form.role == 1 %}
-                            <h3>Vous êtes administrateur du site</h3>
-                        {% else %}
-                            <h3>Vous êtes un client du site</h3>
-                        {% endif %}
+                    <div class="success-boxfull">
+                        <div class="success-box">
+                            <h1 class="titre">Inscription réussie</h1>
+                            <h2>Voici votre identifiant : {{ form.email }}</h2>
+                            {% if form.role == 1 %}
+                                <h3>Vous êtes administrateur du site</h3>
+                            {% else %}
+                                <h3>Vous êtes un client du site</h3>
+                            {% endif %}
+                        </div>
                     </div>
                 {% else %}
                     <div class="error-box">
