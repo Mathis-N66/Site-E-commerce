@@ -5,5 +5,6 @@
     require_once 'inscrireControleur.php';
     require_once 'produitControleur.php';
     require_once 'poduimControleur.php';
+    require_once 'categoriesControleur.php';
 
 ?>

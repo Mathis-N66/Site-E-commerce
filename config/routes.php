@@ -7,7 +7,6 @@ function getPage($db) {
         'maintenance' => "maintenanceControleur",
         'test' => "poduimControleur",
         'inscription' => "inscrireControleur",
-
         'connexion' => "connexionControleur"
 
     ];

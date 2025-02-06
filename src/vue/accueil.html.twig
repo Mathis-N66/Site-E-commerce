@@ -43,22 +43,21 @@
             
             <div class="grid grid-cols-3 gap-8 relative">
                 <!-- Podium Items -->
+
                 <div class="transform translate-y-8 transition-all duration-300 hover:-translate-y-2">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1623998022290-a74f8cc36563" alt="Montre 1" class="w-full h-[400px] object-cover">
+                            <img src="{{produit2.image_url}}" alt="Montre 1" class="w-full h-64 object-cover">
                             <div class="absolute top-4 left-4">
                                 <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-600 text-white font-bold">
+                                2
                                 </div>
                             </div>
                         </div>
-
                         <div class="p-6">
-                        {% for p in listename %}
-                            <h3 class="text-xl font-semibold text-gray-900"><td>{{p.name}}</td></h3>3
-                        {% endfor %}
-                            <p class="mt-2 text-gray-600 line-clamp-2">Description de la montre.</p>
-                            <p class="mt-4 text-2xl font-bold text-indigo-600">100 €</p>
+                            <h3 class="text-xl font-semibold text-gray-900"><td>{{produit2.name}}</td></h3>
+                            <p class="mt-2 text-gray-600 line-clamp-2">{{produit2.description}}</p>
+                            <p class="mt-4 text-2xl font-bold text-indigo-600">{{produit2.price}} €</p>
                             <a href="#" class="mt-4 w-full inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
                                 Voir le détail
                             </a>
@@ -69,7 +68,7 @@
                 <div class="transform translate-y-0 transition-all duration-300 hover:-translate-y-2">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1623998022290-a74f8cc36563" alt="Montre 2" class="w-full h-[450px] object-cover">
+                            <img src="{{produit1.image_url}}" alt="Montre 2" class="w-full h-64 object-cover">
                             <div class="absolute top-4 left-4">
                                 <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-600 text-white font-bold">
                                     1
@@ -77,9 +76,9 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">122</h3>
-                            <p class="mt-2 text-gray-600 line-clamp-2">Description de la montre.</p>
-                            <p class="mt-4 text-2xl font-bold text-indigo-600">300,00 €</p>
+                            <h3 class="text-xl font-semibold text-gray-900">{{produit1.name}}</h3>
+                            <p class="mt-2 text-gray-600 line-clamp-2">{{produit1.description}}</p>
+                            <p class="mt-4 text-2xl font-bold text-indigo-600">{{produit1.price}} €</p>
                             <a href="#" class="mt-4 w-full inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
                                 Voir le détail
                             </a>
@@ -90,7 +89,7 @@
                 <div class="transform translate-y-16 transition-all duration-300 hover:-translate-y-2">
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1623998022290-a74f8cc36563" alt="Montre 3" class="w-full h-[350px] object-cover">
+                            <img src="{{produit3.image_url}}" alt="Montre 3" class="w-full h-64 object-cover">
                             <div class="absolute top-4 left-4">
                                 <div class="flex items-center justify-center w-8 h-8 rounded-full bg-indigo-600 text-white font-bold">
                                     3
@@ -98,9 +97,9 @@
                             </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-semibold text-gray-900">Nom de la montre</h3>
-                            <p class="mt-2 text-gray-600 line-clamp-2">Description de la montre.</p>
-                            <p class="mt-4 text-2xl font-bold text-indigo-600">150,00 €</p>
+                            <h3 class="text-xl font-semibold text-gray-900">{{produit3.name}}</h3>
+                            <p class="mt-2 text-gray-600 line-clamp-2">{{produit3.description}}</p>
+                            <p class="mt-4 text-2xl font-bold text-indigo-600">{{produit3.price}} €</p>
                             <a href="#" class="mt-4 w-full inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
                                 Voir le détail
                             </a>

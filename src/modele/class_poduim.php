@@ -6,12 +6,12 @@ class Poduim{
 
     $this->db = $db;
     
-    $this->selectname = $db->prepare("select p.name from product p where p.id = 1");
+    $this->selectname = $db->prepare("select * from product where id_podium=:id");
 
     }
 
-    public function selectname(){
-        $this->selectname->execute();
+    public function selectname($id){
+        $this->selectname->execute(array(':id'=>$id));
         if ($this->selectname->errorCode()!=0){
         print_r($this->selectname->errorInfo());
         }
