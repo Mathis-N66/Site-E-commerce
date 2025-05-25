@@ -158,30 +158,6 @@ INSERT INTO `role` (`id`, `libelle`) VALUES
 (1, 'Administrateur'),
 (2, 'Client');
 
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE IF NOT EXISTS `test` (
-  `id` int NOT NULL,
-  `nom` varchar(255) NOT NULL,
-  `continent` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
-INSERT INTO `test` (`id`, `nom`, `continent`) VALUES
-(1, 'France', 'europe'),
-(2, 'Allemagne', 'europe'),
-(3, 'Etats-Unis', 'amérique'),
-(4, 'Italie', 'europe'),
-(5, 'Royaume Uni', 'europe'),
-(6, 'Argentine', 'amérique'),
-(7, 'Espagne', 'europe'),
-(8, 'Afrique du Sud', 'afrique'),
-(9, 'Brésil', 'amérique'),
-(10, 'Chine', 'asie'),
-(11, 'Jamaïque', 'amérique'),
-(12, 'Kenya', 'afrique'),
-(13, 'Ethiopie', 'afrique'),
-(14, 'Russie', 'europe');
-
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id` int NOT NULL AUTO_INCREMENT,
