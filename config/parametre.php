@@ -1,8 +1,8 @@
 <?php
 
-$config['serveur']='localhost';
-$config['login'] = 'mathis1';
-$config['mdp'] ='XXKa7TF1B6N0B94E';
+$config['serveur']='Mettre soit (Localhost) soit (adresse IP)'; 
+$config['login'] = 'A changer avec votre login';
+$config['mdp'] ='A changer avec votre mdp';
 $config['db'] = 'seiko_craft';
 
 ?>
