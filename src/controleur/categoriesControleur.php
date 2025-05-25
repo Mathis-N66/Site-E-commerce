@@ -20,3 +20,4 @@ function categoriesControleur($twig, $db) {
     $cate8 = $Categories->selectcat(8);
     echo $twig->render('categories.html.twig', array('categorie1'=>$cate1[0], 'categorie2'=>$cate2[0], 'categorie3'=>$cate3[0], 'categorie4'=>$cate4[0],'categorie5'=>$cate5[0],'categorie6'=>$cate6[0],'categorie7'=>$cate7[0], 'categorie8'=>$cate8[0]));
 }
+

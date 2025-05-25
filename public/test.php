@@ -1,6 +1,6 @@
 <?php
 
-$host = "10.50.0.24";
+$host = "localhost";
 $user = "mathis1";
 $password = "XXKa7TF1B6N0B94E";
 $dbname = "seiko_craft";

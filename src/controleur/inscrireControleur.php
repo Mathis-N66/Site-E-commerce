@@ -14,8 +14,8 @@ function inscrireControleur($twig, $db){
             $form['valide'] = false;
             $form['message'] = 'Les mots de passe sont différents';
         }
-        else{
-            try{
+        else {
+            try {
                 $utilisateur = new Utilisateur(db: $db);
                 $utilisateur->insert($inputEmail, password_hash($inputPassword, PASSWORD_DEFAULT), $role, $nom, $prenom);
             }catch(e){
